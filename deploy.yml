@@ -10,14 +10,15 @@
     npm:
       path: "~/dev/frontend"
       state: present
-  - name: Build app
+  - name: Build frontend app
     command: npm run build
     args:
       chdir: "~/dev/frontend"
-  - name: Deploy fornt-app
+  - name: Deploy forntend app
+    become: yes
     copy:
       src: ~/dev/frontend/build
-      dest: /usr/share/nginx/build
+      dest: /usr/share/nginx/
   - name: Build serverside app
     command: ./gradlew build
     args:
