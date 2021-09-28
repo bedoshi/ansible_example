@@ -6,3 +6,7 @@
     ansible.builtin.git:
       repo: https://github.com/bedoshi/nginx_react_boot.git
       dest: /home/ansible/dev
+  - name: Installing node packages
+    community.general.npm:
+      ci: yes
+      state: latest
