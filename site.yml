@@ -19,3 +19,5 @@
       mode: 0755
   - name: Enable nginx service
     systemd: name=nginx.service enabled=yes
+  - name: Start nginx
+    service: name=nginx state=restarted
