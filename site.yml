@@ -1,7 +1,7 @@
 ---
-- host: localhost
+- hosts: all
   gather_facts: false
-  sudo: yes
+  become: yes
   tasks:
   - name: Copy repo file to install nginx
     copy:
