@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: Cloning repo
+    ansible.builtin.git:
+      repo: https://github.com/bedoshi/nginx_react_boot.git
+      dest: /home/ansible/dev
