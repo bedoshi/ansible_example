@@ -23,5 +23,8 @@
       state: latest
   - name: Enable nginx service
     systemd: name=nginx.service enabled=yes
-  - name: Start nginx
-    service: name=nginx state=restarted
+  - name: Installing nodeJS
+    dnf:
+      name: nodejs
+      state: latest
+
