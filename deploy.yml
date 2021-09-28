@@ -9,3 +9,8 @@
   - name: Installing node packages
     npm:
       path: "~/dev/frontend"
+      state: present
+  - name: Build app
+    command: npm run build
+    args:
+      chdir: "~/dev/frontend"
