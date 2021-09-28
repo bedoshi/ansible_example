@@ -27,4 +27,7 @@
     dnf:
       name: nodejs
       state: latest
-
+  - name: Installing react-scripts
+    npm:
+      name: react-scripts
+      state: present
