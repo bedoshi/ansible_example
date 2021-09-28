@@ -14,3 +14,7 @@
     command: npm run build
     args:
       chdir: "~/dev/frontend"
+  - name: Build serverside app
+    command: ./gradlew build
+    args:
+      chdir: "~/dev/serverside"
