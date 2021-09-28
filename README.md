@@ -1,0 +1,2 @@
+# ansible_example
+ec2でサクっと環境しあげる用
