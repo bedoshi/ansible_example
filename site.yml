@@ -30,4 +30,5 @@
   - name: Installing react-scripts
     npm:
       name: react-scripts
+      global: yes
       state: present
