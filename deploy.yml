@@ -5,7 +5,7 @@
   - name: Cloning repo
     ansible.builtin.git:
       repo: https://github.com/bedoshi/nginx_react_boot.git
-      dest: /home/ansible/dev
+      dest: ~/dev
   - name: Installing node packages
     npm:
       path: "~/dev/frontend"
