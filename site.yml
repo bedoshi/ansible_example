@@ -12,4 +12,10 @@
     dnf:
       name: nginx
       state: latest
-      
+  - name: Copy nginx config
+    copy:
+      src: ./files/my_nginx.conf
+      dest: /etc/nginx/conf.d/my_nginx.conf
+      mode: 0755
+  - name: Enable nginx service
+    systemd: name=nginx.service enabled=yes
