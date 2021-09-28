@@ -17,12 +17,12 @@
       src: ./files/my_nginx.conf
       dest: /etc/nginx/conf.d/my_nginx.conf
       mode: 0755
+  - name: Enable nginx service
+    systemd: name=nginx.service enabled=yes
   - name: Installing Java-11
     dnf:
       name: java-11-openjdk-devel
       state: latest
-  - name: Enable nginx service
-    systemd: name=nginx.service enabled=yes
   - name: Installing nodeJS
     dnf:
       name: nodejs
