@@ -19,7 +19,16 @@
     copy:
       src: ~/dev/frontend/build
       dest: /usr/share/nginx/
+  - name: Restart nginx
+    become: yes
+    systemd: name=nginx.service state=restarted
   - name: Build serverside app
     command: ./gradlew build
     args:
       chdir: "~/dev/serverside"
+  - name: Run serverside app
+    command: java -jar demo-0.0.1-SNAPSHOT.jar &
+    args:
+      chdir: "~/dev/serverside/build/libs"
+
+
