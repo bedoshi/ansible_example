@@ -14,6 +14,10 @@
     command: npm run build
     args:
       chdir: "~/dev/frontend"
+  - name: Deploy fornt-app
+    copy:
+      src: ~/dev/frontend/build
+      dest: /usr/share/nginx/build
   - name: Build serverside app
     command: ./gradlew build
     args:
